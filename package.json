@@ -1,0 +1,14 @@
+{
+  "name": "randombirthdayquotes",
+  "version": "1.0.0",
+  "description": "An app that returns a random birthday quote/message when you input your name and date of birth",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Achufusi Ifeanyi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

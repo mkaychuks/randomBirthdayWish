@@ -1,4 +1,5 @@
 const express = require('express');
+const randomQuotes = require('./myRandom'); // init the random quotes for the app
 
 // init express app
 const app = express();
