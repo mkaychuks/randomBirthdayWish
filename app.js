@@ -16,12 +16,26 @@ function randomize(arr) {
 // init the post request route that handles POST
 app.post('/', (req, res) => {
   const { name, dob } = req.body;
-  //const wish = randomQuotes[Math.floor(Math.random() * randomQuotes.length)];
   const newWish = {
-    name: name,
-    dob: dob,
-    wishes: randomize(randomQuotes), // utilizing the function created for the randomize
+    Name: name,
+    Date_of_Birth: dob,
+    Birthday_Wish: randomize(randomQuotes), // utilizing the function created for the randomize
   };
+  if (name == undefined || null) {
+    return res
+      .status(400)
+      .json({ success: false, message: 'Name is required' });
+  } else if (dob == undefined || null) {
+    return res.status(400).json({
+      success: false,
+      message: 'Date is required (Write in this format "MM-DD-YYYY")',
+    });
+  } else {
+    return res.status(400).json({
+      success: false,
+      message: 'Date is required (Write in this format "MM-DD-YYYY")',
+    });
+  }
   res.send(newWish);
 });
 
