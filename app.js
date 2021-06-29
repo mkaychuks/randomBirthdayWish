@@ -33,7 +33,7 @@ app.post('/', (req, res) => {
   } else {
     return res.status(400).json({
       success: false,
-      message: 'Date is required (Write in this format "MM-DD-YYYY")',
+      message: 'Boom',
     });
   }
   res.send(newWish);
